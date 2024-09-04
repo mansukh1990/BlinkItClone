@@ -22,7 +22,7 @@
             android:layout_height="65.00dp"
             android:background="@drawable/bg_category"
             android:scaleType="centerInside"
-            android:src="@drawable/vegetable" />
+            android:src="@drawable/category_all" />
 
         <TextView
             android:id="@+id/tvCategoryTitle"

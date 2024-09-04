@@ -77,7 +77,7 @@ class AddProductFragment : Fragment() {
             } else if (imageUris.isEmpty()) {
                 Utils.apply {
                     hideDialog()
-                    showDialog(requireContext(), "Please Upload some images")
+                    showToast(requireContext(), "Please Upload some images")
                 }
             } else {
                 val product = Product(

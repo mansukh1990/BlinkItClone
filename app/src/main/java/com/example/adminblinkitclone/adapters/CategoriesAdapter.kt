@@ -7,7 +7,8 @@ import com.example.adminblinkitclone.databinding.ItemViewProductCategoriesBindin
 import com.example.adminblinkitclone.models.Categories
 
 class CategoriesAdapter(
-    private val categoryArrayList: ArrayList<Categories>
+    private val categoryArrayList: ArrayList<Categories>,
+    val onCategoryClicked: (Categories) -> Unit
 ) : RecyclerView.Adapter<CategoriesAdapter.CategoriesViewHolder>() {
 
     class CategoriesViewHolder(val binding: ItemViewProductCategoriesBinding) :
@@ -32,6 +33,9 @@ class CategoriesAdapter(
         holder.binding.apply {
             ivCategoryImage.setImageResource(category.icon)
             tvCategoryTitle.text = category.category
+        }
+        holder.itemView.setOnClickListener {
+            onCategoryClicked(category)
         }
     }
 }
